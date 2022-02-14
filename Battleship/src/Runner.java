@@ -62,9 +62,6 @@ public class Runner
 		}
 		public static void decisionRunner()
 		{
-			System.out.println("Player 1, it is time for you to decide where you want your ships");
-			//The 5 ships are: Carrier (occupies 5 spaces), Battleship (4), Cruiser (3), Submarine (3), and Destroyer (2).
-			System.out.println("Your ship options are:");
 			System.out.println("Carrier - Occupies 5 spaces");
 			int carrier = 5;
 			System.out.println("Battleship - Occupies 4 spaces");
@@ -75,7 +72,6 @@ public class Runner
 			int submarine = 3;
 			System.out.println("Destroyer - Occupies 2 spaces");
 			int destroyer = 2;
-			System.out.println();
 			ShipPlacements.shipDecisions();
 		}
 

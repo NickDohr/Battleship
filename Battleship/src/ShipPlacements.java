@@ -4,117 +4,168 @@ public class ShipPlacements
 	{
 		public static void shipDecisions()
 		{
-			for(int i = 0; i < 5; i++)
-				{
 			Scanner userIntInput = new Scanner(System.in);
 			Scanner userStringInput = new Scanner(System.in);
-			
-			System.out.println("What ship do you want to place?");
-			System.out.println("(1) - Carrier");
-			System.out.println("(2) - Battleship");
-			System.out.println("(3) - Cruiser");
-			System.out.println("(4) - Submarine");
-			System.out.println("(5) - Destroyer");
+			System.out.println("Player 1, you have 4 board choices");
+			System.out.println("Which option do you want to display");
+			System.out.println("Option 1");
+			System.out.println("Option 2");
+			System.out.println("Option 3");
+			System.out.println("Option 4");
+			System.out.println("Option 5");
+			System.out.println("Which one do you want to choose?");
 			int choice = userIntInput.nextInt();
-			switch(choice)
-			{
-				case 1:
-						{
-							System.out.println("You picked the carrier, so you get to choose a 5 in a row location for this ship");
-							System.out.println("Do you want the ship to be vertical or horizontal");
-							System.out.println("(1) - Horizontal");
-							System.out.println("(2) - Vertical");
-							System.out.println("Which one do you want to choose?");
-							int choice2 = userIntInput.nextInt();
-									System.out.println("You chose Horizontal, now you get to choose the letter");
-									System.out.println("Your letter choice is A - J, make your choice with a capital letter");
-									String choice4 = userStringInput.nextLine();
-									switch(choice4)
-									{
-										case "A":
-												{
-													Runner.row = 0;
-												}
-										case "B":
-												{
-													Runner.row = 1;
-												}
-										case "C":
-												{
-													Runner.row = 2;
-												}
-										case "D":
-												{
-													Runner.row = 3;
-												}
-										case "E":
-												{
-													Runner.row = 4;
-												}
-										case "F":
-												{
-													Runner.row = 5;
-												}
-										case "G":
-												{
-													Runner.row = 6;
-												}
-										case "H":
-												{
-													Runner.row = 7;
-												}
-										case "I":
-												{
-													Runner.row = 8;
-												}
-										case "J":
-												{
-													Runner.row = 9;
-												}
-									}
-								
-									System.out.println("Your number choice is 1 - 10");
-									int choice3 = userIntInput.nextInt();
-									Runner.col = choice3;
-									Runner.col = Runner.col - 1;
-									if(Runner.checkBoard[Runner.row][Runner.col].equals("X"))
-										{
-											System.out.println("That space is occupied already, pick a new number ");
-											System.out.println("Your number choice is 1 - 10");
-											int newChoice = userIntInput.nextInt();
-											Runner.col = newChoice;
-										}
-									else if(Runner.checkBoard[Runner.row][Runner.col].equals(" "));
-										{
-											System.out.println("Filling this ship now now");
-											if(choice2 == 1)
-												{
-													Runner.checkBoard[Runner.row][Runner.col] = "X";
-													Runner.checkBoard[Runner.row][Runner.col + 1] = "X";
-													Runner.checkBoard[Runner.row][Runner.col + 2] = "X";
-													Runner.checkBoard[Runner.row][Runner.col + 3] = "X";
-													Runner.checkBoard[Runner.row][Runner.col + 4] = "X";
-												}
-											else if(choice2 == 2)
-												{
-													Runner.checkBoard[Runner.row][Runner.col] = "X";
-													Runner.checkBoard[Runner.row + 1][Runner.col] = "X";
-													Runner.checkBoard[Runner.row + 2][Runner.col] = "X";
-													Runner.checkBoard[Runner.row + 3][Runner.col] = "X";
-													Runner.checkBoard[Runner.row + 4][Runner.col] = "X";
-												}
-										}
-						}
-				case 2:
-						{
-							
-								
-							
-						}
-					}
-				
+			if(choice == 1)
+				{
+			System.out.println("Here is option 1");
+			Runner.checkBoard[0][1] = "X";
+			Runner.checkBoard[0][2] = "X";
+			Runner.checkBoard[0][3] = "X";
+			Runner.checkBoard[0][4] = "X";
+			Runner.checkBoard[0][5] = "X";
 			
+			Runner.checkBoard[6][0] = "X";
+			Runner.checkBoard[7][0] = "X";
+			Runner.checkBoard[8][0] = "X";
+			Runner.checkBoard[9][0] = "X";
 			
+			Runner.checkBoard[2][9] = "X";
+			Runner.checkBoard[3][9] = "X";
+			Runner.checkBoard[4][9] = "X";
+			Runner.checkBoard[5][9] = "X";
+			
+			Runner.checkBoard[2][3] = "X";
+			Runner.checkBoard[2][4] = "X";
+			Runner.checkBoard[2][5] = "X";
+			
+			Runner.checkBoard[6][5] = "X";
+			Runner.checkBoard[6][6] = "X";
+			Runner.checkBoard[6][7] = "X";
+			
+			Runner.checkBoard[8][5] = "X";
+			Runner.checkBoard[8][6] = "X";
+			Runner.displayBoard();
+				}
+			else if(choice == 2)
+				{
+					Runner.checkBoard[0][0] = "X";
+					Runner.checkBoard[1][0] = "X";
+					Runner.checkBoard[2][0] = "X";
+					Runner.checkBoard[3][0] = "X";
+					Runner.checkBoard[4][0] = "X";
+					
+					Runner.checkBoard[6][2] = "X";
+					Runner.checkBoard[7][2] = "X";
+					Runner.checkBoard[8][2] = "X";
+					Runner.checkBoard[9][2] = "X";
+					
+					Runner.checkBoard[0][9] = "X";
+					Runner.checkBoard[1][9] = "X";
+					Runner.checkBoard[2][9] = "X";
+					Runner.checkBoard[3][9] = "X";
+					
+					Runner.checkBoard[1][3] = "X";
+					Runner.checkBoard[1][4] = "X";
+					Runner.checkBoard[1][5] = "X";
+					
+					Runner.checkBoard[9][5] = "X";
+					Runner.checkBoard[9][6] = "X";
+					Runner.checkBoard[9][7] = "X";
+					
+					Runner.checkBoard[6][5] = "X";
+					Runner.checkBoard[6][6] = "X";
+					Runner.displayBoard();
+				}
+			else if(choice == 3)
+				{
+					Runner.checkBoard[0][1] = "X";
+					Runner.checkBoard[0][2] = "X";
+					Runner.checkBoard[0][3] = "X";
+					Runner.checkBoard[0][4] = "X";
+					Runner.checkBoard[0][5] = "X";
+					
+					Runner.checkBoard[2][5] = "X";
+					Runner.checkBoard[2][6] = "X";
+					Runner.checkBoard[2][7] = "X";
+					Runner.checkBoard[2][8] = "X";
+					
+					Runner.checkBoard[4][6] = "X";
+					Runner.checkBoard[4][7] = "X";
+					Runner.checkBoard[4][8] = "X";
+					Runner.checkBoard[4][9] = "X";
+					
+					Runner.checkBoard[4][1] = "X";
+					Runner.checkBoard[4][2] = "X";
+					Runner.checkBoard[4][1] = "X";
+					
+					Runner.checkBoard[7][5] = "X";
+					Runner.checkBoard[7][6] = "X";
+					Runner.checkBoard[7][7] = "X";
+					
+					Runner.checkBoard[9][5] = "X";
+					Runner.checkBoard[9][6] = "X";
+					Runner.displayBoard();
+				}
+			else if(choice == 4)
+				{
+					Runner.checkBoard[5][1] = "X";
+					Runner.checkBoard[6][1] = "X";
+					Runner.checkBoard[7][1] = "X";
+					Runner.checkBoard[8][1] = "X";
+					Runner.checkBoard[9][1] = "X";
+					
+					Runner.checkBoard[1][3] = "X";
+					Runner.checkBoard[2][3] = "X";
+					Runner.checkBoard[3][3] = "X";
+					Runner.checkBoard[4][3] = "X";
+					
+					Runner.checkBoard[5][5] = "X";
+					Runner.checkBoard[6][5] = "X";
+					Runner.checkBoard[7][5] = "X";
+					Runner.checkBoard[8][5] = "X";
+					
+					Runner.checkBoard[1][7] = "X";
+					Runner.checkBoard[2][7] = "X";
+					Runner.checkBoard[3][7] = "X";
+					
+					Runner.checkBoard[3][9] = "X";
+					Runner.checkBoard[4][9] = "X";
+					Runner.checkBoard[5][9] = "X";
+					
+					Runner.checkBoard[1][1] = "X";
+					Runner.checkBoard[2][1] = "X";
+					Runner.displayBoard();
+				}
+			else if(choice == 5)
+				{
+					Runner.checkBoard[5][4] = "X";
+					Runner.checkBoard[6][4] = "X";
+					Runner.checkBoard[7][4] = "X";
+					Runner.checkBoard[8][4] = "X";
+					Runner.checkBoard[9][4] = "X";
+					
+					Runner.checkBoard[1][2] = "X";
+					Runner.checkBoard[2][2] = "X";
+					Runner.checkBoard[3][2] = "X";
+					Runner.checkBoard[4][2] = "X";
+					
+					Runner.checkBoard[7][6] = "X";
+					Runner.checkBoard[7][7] = "X";
+					Runner.checkBoard[7][8] = "X";
+					Runner.checkBoard[7][9] = "X";
+					
+					Runner.checkBoard[1][7] = "X";
+					Runner.checkBoard[2][7] = "X";
+					Runner.checkBoard[3][7] = "X";
+					
+					Runner.checkBoard[3][9] = "X";
+					Runner.checkBoard[4][9] = "X";
+					Runner.checkBoard[5][9] = "X";
+					
+					Runner.checkBoard[1][0] = "X";
+					Runner.checkBoard[2][0] = "X";
+					Runner.displayBoard();
+				}
 		}
 		}
-	}
+	
