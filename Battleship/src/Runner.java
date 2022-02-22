@@ -12,7 +12,7 @@ public class Runner
 			{
 				
 				Scanner userStringInput = new Scanner(System.in);
-			System.out.println("Hello, Player 1, is your name?");
+			System.out.println("Hello, Player 1, what is your name?");
 			player1.name = userStringInput.nextLine();
 			System.out.println("Hello " + player1.name + ", welcome to the game");
 			
@@ -100,6 +100,8 @@ public class Runner
 			Scanner userIntInput = new Scanner(System.in);
 			Scanner userStringInput = new Scanner(System.in);
 			System.out.println(p.getName() + ", it is time for you to make your move");
+			System.out.println("Here are your current guesses:");
+			Player.displayShowBoard(p);
 			System.out.println("Your Letter Options are A - J, Pick A letter");
 			int row = 0;
 			String letterChoice = userStringInput.nextLine();
@@ -178,6 +180,16 @@ public class Runner
 							System.out.println("You hit a ship!");
 							p.showBoard[row][col] = "X";
 							Player.displayShowBoard(p);
+							p.setNumOfHits(p.numOfHits + 1);
+							if(p.numOfHits == 4)
+								{
+									System.out.println("You sunk a ship!");
+									
+								}
+							else if(p.numOfHits == 24)
+								{
+									System.out.println(p.getName() + "has won this battleship game!");
+								}
 						}
 					else
 						{
@@ -193,6 +205,15 @@ public class Runner
 							System.out.println("You hit a ship!");
 							p.showBoard[row][col] = "X";
 							Player.displayShowBoard(p);
+							p.setNumOfHits(p.numOfHits + 1);
+							if(p.numOfHits == 4)
+								{
+									System.out.println("You sunk a ship!");
+								}
+							else if(p.numOfHits == 24)
+								{
+									System.out.println(p.getName() + "has won this battleship game!");
+								}
 						}
 					else
 						{

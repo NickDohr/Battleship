@@ -79,6 +79,8 @@ public class Player
 			}
 		public static void displayShowBoard(Player p)
 			{
+			//	System.out.println(" ---------------------" + p.getName() + "'s Board ----------------------");
+				System.out.println("                     - "+ p.getName() + "'s Board - ");
 				System.out.println("     1     2     3     4     5     6     7     8     9     10");
 				System.out.println("  -------------------------------------------------------------");
 				System.out.print("A |  " + p.showBoard[0][0] + "  |  " + p.showBoard [0][1] + "  |  "  + p.showBoard [0][2] + "  |  " + p.showBoard [0][3] + "  |  " + p.showBoard [0][4] + "  |  " + p.showBoard [0][5] + "  |  ");
@@ -111,36 +113,9 @@ public class Player
 				System.out.print("J |  " + p.showBoard[9][0] + "  |  " + p.showBoard [9][1] + "  |  "  + p.showBoard [9][2] + "  |  " + p.showBoard [9][3] + "  |  " + p.showBoard [9][4] + "  |  " + p.showBoard [9][5] + "  |  ");
 				System.out.println( p.showBoard[9][6] + "  |  " + p.showBoard [9][7] + "  |  "  + p.showBoard [9][8] + "  |  " + p.showBoard [9][9] + "  |  ");
 				System.out.println("  -------------------------------------------------------------");
+				Runner.pause();
 				
-				
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
-						System.out.println();
+
 						System.out.println();
 					
 			}

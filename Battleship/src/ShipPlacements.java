@@ -19,7 +19,7 @@ public class ShipPlacements
 			int choice = (int) (Math.random() * 5) + 1;
 			if(choice == 1)
 				{
-				System.out.println("Here is option 1");
+				
 				p.checkBoard[0][1] = "X";
 				p.checkBoard[0][2] = "X";
 				p.checkBoard[0][3] = "X";
@@ -195,60 +195,11 @@ public class ShipPlacements
 					Runner.displayBoard(p);
 				}
 			Runner.pause();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
+			for(int i = 0; i < 53; i++)
+				{
+					System.out.println();
+				}
+
 			
 		}
 		}
