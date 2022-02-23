@@ -10,7 +10,7 @@ public class Runner
 		
 		public static void main(String[] args)
 			{
-				
+				//finished game
 				Scanner userStringInput = new Scanner(System.in);
 			System.out.println("Hello, Player 1, what is your name?");
 			player1.name = userStringInput.nextLine();
@@ -33,7 +33,6 @@ public class Runner
 			while(stillPlaying)
 				{
 					playerTurn(player1);
-					
 					playerTurn(player2);
 				}
 			
